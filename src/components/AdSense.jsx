@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 const AD_CLIENT = 'ca-pub-5069208540458066';
 
@@ -9,7 +9,6 @@ const AD_CLIENT = 'ca-pub-5069208540458066';
  * @param {'display'|'in-article'} [variant='display'] — `in-article` uses fluid layout for blog posts.
  */
 export default function AdSense({ adSlot, className = '', variant = 'display' }) {
-    const insRef = useRef(null);
     const isInArticle = variant === 'in-article';
 
     useEffect(() => {
@@ -23,7 +22,6 @@ export default function AdSense({ adSlot, className = '', variant = 'display' })
     return (
         <div className={className}>
             <ins
-                ref={insRef}
                 className="adsbygoogle"
                 style={isInArticle ? { display: 'block', textAlign: 'center' } : { display: 'block' }}
                 data-ad-client={AD_CLIENT}

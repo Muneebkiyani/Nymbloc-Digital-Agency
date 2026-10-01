@@ -11,7 +11,7 @@ const Checkout = () => {
         };
     }, [search]);
 
-    const getPrice = () => {
+    const price = useMemo(() => {
         const prices = {
             Website: {
                 'Starter Website': '$199',
@@ -31,7 +31,7 @@ const Checkout = () => {
         };
 
         return prices[service]?.[plan] || 'Custom / Contact';
-    };
+    }, [service, plan]);
 
     return (
         <div className="checkout-page">
@@ -62,25 +62,25 @@ const Checkout = () => {
                                     <input type="hidden" name="_subject" value={`New Order Proposal: ${plan} ${service} Development`} />
                                     <input type="hidden" name="Service" value={service} />
                                     <input type="hidden" name="Plan" value={plan} />
-                                    <input type="hidden" name="Amount" value={getPrice()} />
+                                    <input type="hidden" name="Amount" value={price} />
                                     <input type="hidden" name="_template" value="table" />
-                                    <input type="hidden" name="_captcha" value="false" />
+                                    <input type="hidden" name="_captcha" value="true" />
 
                                     <div className="form-group">
-                                        <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Full Name</label>
-                                        <input type="text" name="name" placeholder="John Doe" required />
+                                        <label htmlFor="checkout-name" style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Full Name</label>
+                                        <input id="checkout-name" type="text" name="name" placeholder="John Doe" required />
                                     </div>
                                     <div className="form-group">
-                                        <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Email Address</label>
-                                        <input type="email" name="email" placeholder="john@example.com" required />
+                                        <label htmlFor="checkout-email" style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Email Address</label>
+                                        <input id="checkout-email" type="email" name="email" placeholder="john@example.com" required />
                                     </div>
                                     <div className="form-group">
-                                        <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Company Name</label>
-                                        <input type="text" name="company" placeholder="Your Company" />
+                                        <label htmlFor="checkout-company" style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Company Name</label>
+                                        <input id="checkout-company" type="text" name="company" placeholder="Your Company" />
                                     </div>
                                     <div className="form-group">
-                                        <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Project Brief (Optional)</label>
-                                        <textarea name="message" placeholder="Tell us more about your project..."></textarea>
+                                        <label htmlFor="checkout-message" style={{ display: 'block', marginBottom: '8px', color: 'var(--text-light)' }}>Project Brief (Optional)</label>
+                                        <textarea id="checkout-message" name="message" placeholder="Tell us more about your project..."></textarea>
                                     </div>
                                     
                                     <div className="checkout-notice">
@@ -113,7 +113,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="summary-total">
                                     <span className="summary-total-label">Estimate</span>
-                                    <span className="summary-total-price">{getPrice()}</span>
+                                    <span className="summary-total-price">{price}</span>
                                 </div>
                                 <p className="summary-disclaimer">
                                     * Final pricing might vary based on specific requirements. We will provide a formal invoice after the discovery call.

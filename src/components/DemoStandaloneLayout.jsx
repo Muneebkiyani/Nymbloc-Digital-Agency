@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { ScrollTrigger } from '../utils/gsapClient';
 import Seo from './Seo';
@@ -23,32 +23,47 @@ export default function DemoStandaloneLayout() {
     const { pathname } = useLocation();
     useSmoothScroll();
 
-    const slugMatch = /^\/demos?\/([^/]+)$/.exec(pathname);
+    const slugMatch = useMemo(() => /^\/demos?\/([^/]+)$/.exec(pathname), [pathname]);
     const popupSlug = slugMatch?.[1];
     const popupDemo = popupSlug ? getNicheDemoBySlug(popupSlug) : null;
     const popupWa = popupDemo ? whatsappHref(popupDemo.label) : '';
     const orderWa = popupDemo ? whatsappWebsiteOrderHref(popupDemo.label) : '';
 
-    const farmMatch = /^\/demos?\/(restaurants)$/.exec(pathname);
-    const isFarmRestaurant = Boolean(farmMatch);
-    const farmDemo = isFarmRestaurant ? getNicheDemoBySlug('restaurants') : null;
-    const farmWa = farmDemo ? whatsappHref(farmDemo.label) : '';
+    const { isFarmRestaurant, farmDemo, farmWa, isSalonStudio, salonDemo, salonWa,
+            isCleaningCorporate, cleaningDemo, cleaningWa, cleaningCo,
+            isBakeryPeaceput, bakeryDemo, bakeryWa } = useMemo(() => {
+        const farmMatch = /^\/demos?\/(restaurants)$/.exec(pathname);
+        const _isFarm = Boolean(farmMatch);
+        const _farmDemo = _isFarm ? getNicheDemoBySlug('restaurants') : null;
 
-    const salonMatch = /^\/demos?\/(salons)$/.exec(pathname);
-    const isSalonStudio = Boolean(salonMatch);
-    const salonDemo = isSalonStudio ? getNicheDemoBySlug('salons') : null;
-    const salonWa = salonDemo ? whatsappHref(salonDemo.label) : '';
+        const salonMatch = /^\/demos?\/(salons)$/.exec(pathname);
+        const _isSalon = Boolean(salonMatch);
+        const _salonDemo = _isSalon ? getNicheDemoBySlug('salons') : null;
 
-    const cleaningMatch = /^\/demos?\/(cleaning)$/.exec(pathname);
-    const isCleaningCorporate = Boolean(cleaningMatch);
-    const cleaningDemo = isCleaningCorporate ? getNicheDemoBySlug('cleaning') : null;
-    const cleaningWa = cleaningDemo ? whatsappHref(cleaningDemo.label) : '';
-    const cleaningCo = cleaningDemo?.corporate ?? {};
+        const cleaningMatch = /^\/demos?\/(cleaning)$/.exec(pathname);
+        const _isCleaning = Boolean(cleaningMatch);
+        const _cleaningDemo = _isCleaning ? getNicheDemoBySlug('cleaning') : null;
 
-    const bakeryMatch = /^\/demos?\/(bakeries)$/.exec(pathname);
-    const isBakeryPeaceput = Boolean(bakeryMatch);
-    const bakeryDemo = isBakeryPeaceput ? getNicheDemoBySlug('bakeries') : null;
-    const bakeryWa = bakeryDemo ? whatsappHref(bakeryDemo.label) : '';
+        const bakeryMatch = /^\/demos?\/(bakeries)$/.exec(pathname);
+        const _isBakery = Boolean(bakeryMatch);
+        const _bakeryDemo = _isBakery ? getNicheDemoBySlug('bakeries') : null;
+
+        return {
+            isFarmRestaurant: _isFarm,
+            farmDemo: _farmDemo,
+            farmWa: _farmDemo ? whatsappHref(_farmDemo.label) : '',
+            isSalonStudio: _isSalon,
+            salonDemo: _salonDemo,
+            salonWa: _salonDemo ? whatsappHref(_salonDemo.label) : '',
+            isCleaningCorporate: _isCleaning,
+            cleaningDemo: _cleaningDemo,
+            cleaningWa: _cleaningDemo ? whatsappHref(_cleaningDemo.label) : '',
+            cleaningCo: _cleaningDemo?.corporate ?? {},
+            isBakeryPeaceput: _isBakery,
+            bakeryDemo: _bakeryDemo,
+            bakeryWa: _bakeryDemo ? whatsappHref(_bakeryDemo.label) : '',
+        };
+    }, [pathname]);
 
     useEffect(() => {
         AOS.init({

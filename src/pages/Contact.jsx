@@ -58,16 +58,16 @@ const Contact = () => {
                             <input type="hidden" name="_captcha" value="true" />
                             
                             <div className="form-group">
-                                <label className="form-label">Full name</label>
-                                <input type="text" name="name" placeholder="John Doe" required />
+                                <label htmlFor="contact-name" className="form-label">Full name</label>
+                                <input id="contact-name" type="text" name="name" placeholder="John Doe" required />
                             </div>
                             <div className="form-group">
-                                <label className="form-label">Email address</label>
-                                <input type="email" name="email" placeholder="john@example.com" required />
+                                <label htmlFor="contact-email" className="form-label">Email address</label>
+                                <input id="contact-email" type="email" name="email" placeholder="john@example.com" required />
                             </div>
                             <div className="form-group">
-                                <label className="form-label">Interested service</label>
-                                <select name="service" required defaultValue="">
+                                <label htmlFor="contact-service" className="form-label">Interested service</label>
+                                <select id="contact-service" name="service" required defaultValue="">
                                     <option value="" disabled>Select Service</option>
                                     <option value="website">Website Development</option>
                                     <option value="application">Application Development</option>
@@ -75,8 +75,8 @@ const Contact = () => {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label className="form-label">Project details</label>
-                                <textarea name="message" placeholder="Tell us about your project goals..." required></textarea>
+                                <label htmlFor="contact-message" className="form-label">Project details</label>
+                                <textarea id="contact-message" name="message" placeholder="Tell us about your project goals..." required></textarea>
                             </div>
                             <button type="submit" className="submit-btn">Send message →</button>
                             

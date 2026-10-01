@@ -4,44 +4,75 @@ import { withBlogCover } from './blogCovers.js';
 const blogPostsRaw = [
     {
         slug: 'how-much-does-a-website-cost-2026',
-        title: 'How Much Does a Website Cost in 2026?',
+        title: 'How Much Does a Website Cost in 2026? A Complete Pricing Guide',
         date: '2026-01-08',
-        readTime: '11 min read',
+        readTime: '8 min read',
         excerpt:
-            'A practical breakdown of domains, hosting, design, development, and ongoing costs—so you can budget without surprises.',
+            'A practical, transparent breakdown of design, development, hosting, and ongoing maintenance costs—so you can budget accurately without surprise agency bills.',
         sections: [
             {
                 type: 'p',
-                text: 'Website pricing is one of the most searched questions for good reason: the range is enormous. A simple brochure site can cost a few hundred dollars if you use a template and do the work yourself, while a custom web application can run well into six figures. What matters is matching scope to outcomes—not buying the most expensive option by default.',
-            },
-            {
-                type: 'h2',
-                text: 'The main cost buckets',
+                text: 'Website pricing remains one of the most confusing topics for business owners in 2026. Search online and you will find estimates ranging from $500 on freelance marketplaces to over $100,000 from established digital agencies. This massive spread exists because "a website" can mean anything from a single-page template to a complex, custom-engineered web application handling real-time payments and customer workflows.',
             },
             {
                 type: 'p',
-                text: 'Most projects fall into five buckets: strategy and content, design, front-end development, back-end or integrations, and launch plus hosting. Small businesses often underestimate content and photography; those line items affect timeline as much as code.',
+                text: 'To make an informed business decision, you need to understand how scope, technology stack, and engineering depth dictate actual costs. Here is a realistic breakdown of what you should expect to invest based on current 2026 industry benchmarks.',
+            },
+            {
+                type: 'h2',
+                text: 'Realistic pricing tiers for business websites',
             },
             {
                 type: 'ul',
                 items: [
-                    'Domain: typically $10–$20 per year for a standard .com.',
-                    'Hosting: shared hosting can be $5–$30/month; managed WordPress or cloud setups scale up from there.',
-                    'Design and build: template sites are cheaper; custom UX and components cost more because they are built for your brand and conversion goals.',
-                    'Maintenance: security updates, backups, and small fixes are ongoing—plan for them annually.',
+                    'Template-Based or DIY Sites ($300 – $1,500): Built using site builders (Squarespace, Wix) or pre-made WordPress themes. Best for early-stage freelancers or micro-businesses testing an idea. Limitations include rigid layouts, slower performance, and generic aesthetics.',
+                    'Custom Small Business Sites ($2,500 – $7,500): Professionally designed and coded (custom WordPress, Webflow, or clean modern React/HTML). Includes tailored UX design, conversion strategy, responsive mobile optimization, Core Web Vitals compliance, and basic SEO foundation.',
+                    'Advanced Corporate & E-Commerce Platforms ($8,000 – $25,000): Comprehensive platforms featuring custom WooCommerce or Shopify architectures, third-party CRM and ERP integrations, multi-tiered lead funnels, and custom animations.',
+                    'Bespoke Web Applications & SaaS MVPs ($20,000 – $60,000+): Engineered using modern web stacks (React, Vite, Node, PostgreSQL). Includes authenticated user portals, custom business logic, dashboard analytics, and scalable cloud infrastructure.',
                 ],
             },
             {
                 type: 'h2',
-                text: 'How to get an accurate quote',
+                text: 'The 5 core cost drivers behind any web project',
             },
             {
                 type: 'p',
-                text: 'Bring a one-page brief: who the site is for, what actions visitors should take, must-have pages, and any systems you need to connect (CRM, booking, payments). Vague requests produce vague estimates; specificity keeps both sides honest.',
+                text: 'When an agency or developer calculates an estimate, their quote reflects five key components: strategy, custom UX design, frontend development, backend/integrations, and quality assurance.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Strategy and Copywriting: Writing compelling, conversion-focused messaging that turns visitors into clients. Often overlooked, but poor copy renders even beautiful design ineffective.',
+                    'User Experience (UX) & Interface (UI) Design: Creating custom Figma mockups tailored to your brand rather than forcing your business into a pre-made template.',
+                    'Frontend Engineering: Building clean, lightweight, accessible HTML, CSS, and JavaScript. Custom builds ensure near-instant load speeds and top Core Web Vitals scores.',
+                    'Integrations & Functionality: Connecting forms to CRMs (HubSpot, Salesforce), setting up calendar scheduling, payment gateways (Stripe), and email automation.',
+                    'Launch, QA & Warranty: Multi-device testing, cross-browser compatibility checks, 301 redirect audits, and a post-launch support guarantee.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: 'Ongoing maintenance: what happens after launch?',
             },
             {
                 type: 'p',
-                text: 'If you are comparing agencies, ask what is included in “launch”: performance tuning, basic SEO setup, analytics, training, and warranty period. Those details separate a finished product from a handoff that creates extra bills later.',
+                text: 'A website is not a one-time expense; it is a digital asset that requires regular maintenance. Budgeting for ongoing operations avoids unexpected downtime and security breaches.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Domain Registration: $12 – $25 per year for standard TLDs (.com, .org).',
+                    'Hosting Infrastructure: $10 – $30/month for managed business hosting; $50 – $200/month for high-traffic or cloud VPS architectures (AWS, DigitalOcean).',
+                    'Security & Backups: Automated daily cloud backups, SSL/TLS certificates, and firewall monitoring ($100 – $300 annually).',
+                    'Technical Support & Updates: Monthly retainers for CMS core/plugin updates, bug fixes, and minor content adjustments typically range from $150 to $600/month.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: 'How to avoid budget overruns when hiring an agency',
+            },
+            {
+                type: 'p',
+                text: 'The most frequent cause of delayed launches and budget inflation is scope creep. Before seeking quotes, prepare a structured project brief outlining your target audience, core business objectives, reference sites you admire, and non-negotiable integrations. Clear specifications protect both parties and ensure your investment delivers measurable returns.',
             },
         ],
     },
@@ -49,143 +80,271 @@ const blogPostsRaw = [
         slug: 'why-small-businesses-struggle-online',
         title: 'Why Small Businesses Struggle Online (and How to Fix It)',
         date: '2026-01-12',
-        readTime: '9 min read',
+        readTime: '7 min read',
         excerpt:
-            'Common patterns we see: unclear offers, slow sites, and no measurement. Here is a grounded checklist to improve traction.',
+            'A practical diagnostic guide covering unclear offers, mobile performance bottlenecks, and missing conversion tracking—with an actionable 5-step turnaround plan.',
         sections: [
             {
                 type: 'p',
-                text: 'Many small business websites look fine at a glance but underperform because they never answer three questions in the first screen: what you do, who it is for, and what the visitor should do next. Without that clarity, even paid traffic wastes money.',
+                text: 'Millions of small businesses invest thousands of dollars into website redesigns each year, only to see zero noticeable impact on their phone calls, form inquiries, or revenue. When a site fails to produce results, owners often assume they need more traffic, pouring money into Google or Meta ads. However, driving traffic to a leaky website only accelerates budget waste.',
+            },
+            {
+                type: 'p',
+                text: 'In our work auditing hundreds of underperforming business websites, the problem is rarely design aesthetics alone. Instead, it stems from structural flaws in clarity, user flow, and technical responsiveness. Here are the primary reasons small business websites underperform—and the exact steps to remedy them.',
             },
             {
                 type: 'h2',
-                text: 'Clarity beats cleverness',
+                text: '1. Failing the 5-second clarity test',
             },
             {
                 type: 'p',
-                text: 'Jargon and vague claims (“we empower synergy”) do not help someone decide to call or book. Replace them with concrete outcomes: timelines, service areas, pricing ranges where possible, and proof such as reviews or certifications.',
+                text: 'Online visitors have negligible attention spans. When a prospective client lands on your homepage, they need to answer three fundamental questions within five seconds: What do you do? Who is it for? What should I do next? If your hero section relies on vague corporate platitudes ("Innovating Tomorrow’s Solutions Today") rather than plain language ("Commercial HVAC Maintenance in Dallas, TX"), visitors will bounce back to search results immediately.',
             },
             {
                 type: 'h2',
-                text: 'Speed and mobile matter for trust',
+                text: '2. The mobile performance penalty',
             },
             {
                 type: 'p',
-                text: 'Slow pages feel broken. Large unoptimized images, excessive third-party scripts, and cheap overcrowded hosting are frequent culprits. Run a simple performance audit, compress images, and remove plugins or scripts you do not need.',
+                text: 'Over 65% of local service and B2B searches occur on mobile devices. Yet, many business websites are designed exclusively on high-resolution desktop monitors. Common mobile mistakes include uncompressed 4MB hero images, tiny text that forces zooming, awkward pop-ups that cannot be closed on small screens, and navigation menus that take multiple taps to locate a contact link.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Every second of page load delay reduces conversion rates by up to 7%.',
+                    'Mobile visitors expect instantaneous click-to-call phone buttons and one-tap WhatsApp messaging.',
+                    'Clean, thumb-friendly form inputs dramatically increase inquiry completion rates compared to lengthy multi-field forms.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: '3. Concealed or non-existent social proof',
             },
             {
                 type: 'p',
-                text: 'Finally, install basic analytics and define one primary goal (calls, form fills, bookings). If you are not measuring, you are guessing—which makes improvement nearly impossible.',
+                text: 'Trust is the single most valuable currency on the internet. Businesses struggle online when they make bold claims without verifiable evidence. Including genuine customer reviews, client logos, certifications, and concise case studies right beside primary calls-to-action reduces decision anxiety and validates your credibility.',
+            },
+            {
+                type: 'h2',
+                text: '4. The 5-step turnaround action plan',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Rewrite your hero headline: State your exact service, geographic area, and primary customer benefit.',
+                    'Audit your page speed: Test your homepage and key service pages using Google PageSpeed Insights and address any critical performance warnings.',
+                    'Simplify your inquiry forms: Reduce required fields to name, contact info, and project overview. Every extra field decreases submissions.',
+                    'Add prominent contact options: Ensure your phone number, email, and direct booking links are visible in the header across both mobile and desktop viewports.',
+                    'Install conversion tracking: Track form submissions, phone call clicks, and key link clicks in Google Analytics 4 so you know exactly which channels generate revenue.',
+                ],
             },
         ],
     },
     {
         slug: 'wordpress-vs-custom-website',
-        title: 'WordPress vs Custom Websites: Which Fits Your Business?',
+        title: 'WordPress vs Custom Websites: Which Architecture Fits Your Business?',
         date: '2026-01-18',
-        readTime: '10 min read',
+        readTime: '9 min read',
         excerpt:
-            'When WordPress wins, when a custom stack wins, and how to avoid choosing the wrong foundation.',
+            'An unbiased architectural comparison of WordPress and custom React/static builds covering speed, long-term maintenance costs, security, and scalability.',
         sections: [
             {
                 type: 'p',
-                text: 'WordPress powers a huge share of the web because it is excellent for content-heavy sites, blogs, and many e-commerce setups with WooCommerce. A custom site—often React, Next.js, or similar—shines when you need a highly tailored product experience, strict performance budgets, or complex authenticated applications.',
-            },
-            {
-                type: 'h2',
-                text: 'Choose WordPress when…',
-            },
-            {
-                type: 'ul',
-                items: [
-                    'Marketing and editorial teams will update pages and posts frequently.',
-                    'You want a large plugin ecosystem for SEO, forms, and commerce.',
-                    'Time-to-launch and budget favor a proven CMS workflow.',
-                ],
-            },
-            {
-                type: 'h2',
-                text: 'Choose custom when…',
-            },
-            {
-                type: 'ul',
-                items: [
-                    'The site is really a web app: dashboards, roles, real-time data, or heavy interactivity.',
-                    'You need fine-grained control over performance and architecture.',
-                    'WordPress’s model would fight your product instead of supporting it.',
-                ],
+                text: 'Choosing the technological foundation for your business website is one of the most consequential decisions you will make. Pick the wrong stack, and you face unmaintainable technical debt, slow loading speeds, recurring security vulnerabilities, and eventual costly migrations. The two most common paths for growing companies are WordPress and custom modern frontend builds (such as React, Vite, or Next.js).',
             },
             {
                 type: 'p',
-                text: 'Hybrid approaches exist: headless WordPress for content with a custom front-end. That adds complexity, so use it when the benefits clearly outweigh operational cost.',
+                text: 'Neither option is universally superior; each is optimized for distinct operational requirements. Understanding the real-world trade-offs will save your team months of frustration and thousands of dollars in redevelopment.',
+            },
+            {
+                type: 'h2',
+                text: 'When WordPress is the ideal solution',
+            },
+            {
+                type: 'p',
+                text: 'Powering over 40% of the web, WordPress remains the undisputed leader for content-heavy websites, publishing platforms, and standard e-commerce implementations using WooCommerce.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Frequent Content Publishing: If marketing teams, copywriters, or non-technical staff need to publish blog articles, case studies, and landing pages weekly, WordPress offers an intuitive Gutenberg editor.',
+                    'Expansive Plugin Ecosystem: Need advanced SEO controls (Yoast/RankMath), membership portals, appointment booking, or multi-lingual translation? Established plugins solve these out of the box.',
+                    'Lower Initial Development Costs: Standard marketing sites can be launched rapidly using proven frameworks, reducing upfront agency engineering hours.',
+                    'Broad Developer Availability: Finding contractors or agencies familiar with WordPress maintenance is straightforward worldwide.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: 'When custom development (React/Vite) wins',
+            },
+            {
+                type: 'p',
+                text: 'A custom frontend stack decouples presentation from server-side databases, rendering static HTML and optimized JavaScript. This architecture shines when performance, security, and unique product experiences are non-negotiable.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Unrivaled Speed and Core Web Vitals: Custom builds contain zero plugin bloat or unnecessary database queries, consistently scoring 95–100 on Google PageSpeed Insights.',
+                    'Bulletproof Security: Static sites eliminate traditional database injection attacks (SQLi) and PHP vulnerabilities, drastically minimizing maintenance overhead.',
+                    'Interactive Web Applications: If your site features custom calculators, client portals, interactive product configurators, or real-time API integrations, React handles complex state effortlessly.',
+                    'Tailored Brand Experiences: Complete freedom over layout, typography, animations, and micro-interactions without fighting against CMS theme constraints.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: 'Total cost of ownership: the 3-year view',
+            },
+            {
+                type: 'p',
+                text: 'While WordPress often has a lower initial price tag, ongoing maintenance can accumulate quickly. Premium plugins charge annual licensing fees ($100 – $500/year), and regular core/plugin updates require professional staging and testing to prevent broken layouts. Conversely, a custom static React site may require higher upfront design and engineering investment, but hosting is often near-zero on modern edge networks (Vercel, Cloudflare Pages), with virtually zero routine vulnerability patching required.',
+            },
+            {
+                type: 'h2',
+                text: 'Summary recommendation',
+            },
+            {
+                type: 'p',
+                text: 'Opt for WordPress if your primary goal is editorial agility, frequent content marketing, and standard business blogging. Choose a custom modern stack if your site functions as a conversion engine or software product where load speed, custom UI/UX, and zero maintenance friction directly impact your bottom line.',
             },
         ],
     },
     {
         slug: 'how-to-get-clients-from-your-website',
-        title: 'How to Get Clients From Your Website Without “Hacks”',
+        title: 'How to Get Clients From Your Website Without Gimmicks',
         date: '2026-01-22',
         readTime: '8 min read',
         excerpt:
-            'Focus on message-market fit, proof, and friction-free contact paths—tactics that compound over time.',
+            'A practical B2B and service guide on message-market clarity, strategic social proof, and removing contact friction to turn organic visitors into qualified inquiries.',
         sections: [
             {
                 type: 'p',
-                text: 'Client acquisition from a website is less about tricks and more about reducing doubt. Prospects want to understand what you deliver, see that others trust you, and take the next step without confusion.',
+                text: 'Generating qualified client inquiries from your website is rarely about discovering secret SEO tricks or using aggressive pop-up overlays. In reality, conversion comes down to systematically eliminating skepticism and friction. When prospective buyers arrive on your site, they are actively looking for reasons to rule you out. Your website must guide them from hesitation to confident action.',
             },
             {
                 type: 'h2',
-                text: 'Lead with outcomes',
+                text: '1. Position around tangible outcomes, not service deliverables',
             },
             {
                 type: 'p',
-                text: 'Describe services in terms of customer outcomes: saved time, increased leads, fewer support tickets, clearer reporting. Pair that with case-style blurbs—even anonymized ones with metrics help more than generic superlatives.',
+                text: 'Clients do not buy "web design," "search engine optimization," or "cloud architecture." They buy more high-ticket consultation requests, lower customer acquisition costs, automated internal workflows, and reliable infrastructure that does not crash during peak sales.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Instead of: "We build responsive React websites with modern UI components."',
+                    'Lead with: "We design and engineer high-performance web systems that convert qualified traffic into contracted commercial clients."',
+                    'State your primary turnaround times and typical budget ranges early to filter out unqualified tire-kickers.',
+                ],
             },
             {
                 type: 'h2',
-                text: 'Make contact obvious',
+                text: '2. Deploy surgical social proof',
             },
             {
                 type: 'p',
-                text: 'Use a persistent phone number or “Book a call” in the header on desktop and mobile. Forms should ask only what you need at first contact; long forms kill conversion. Set expectations for response time.',
+                text: 'Generic reviews ("Great team, highly recommend!") do little to convince discerning buyers. Instead, place contextual proof points alongside each primary service offering: specific percentage improvements in speed, verifiable lead volume increases, and direct client quotes discussing how your process alleviated their concerns.',
+            },
+            {
+                type: 'h2',
+                text: '3. Eliminate contact friction and offer immediate communication channels',
+            },
+            {
+                type: 'p',
+                text: 'Different buyers prefer different communication channels. Forcing every prospect to fill out an exhaustive 12-question form kills conversion momentum. Offer tiered contact pathways:',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'A streamlined 3-field discovery form (Name, Contact Email, Project Scope) for detailed inquiries.',
+                    'Direct tap-to-call phone access in the header for urgent requests and high-intent decision-makers.',
+                    'Direct WhatsApp or instant messaging buttons for rapid real-time qualification.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: '4. The 15-minute response rule',
+            },
+            {
+                type: 'p',
+                text: 'Data across B2B sales consistently demonstrates that responding to an inbound lead within 15 minutes increases close rates by over 300% compared to replying the following business day. Configure automated SMS or CRM notifications so your team can acknowledge inquiries instantly, even if the comprehensive proposal follows later.',
             },
         ],
     },
     {
         slug: 'core-web-vitals-explained-business',
-        title: 'Core Web Vitals Explained for Business Owners',
+        title: 'Core Web Vitals Explained for Business Owners (2026 Edition)',
         date: '2026-02-02',
-        readTime: '7 min read',
+        readTime: '8 min read',
         excerpt:
-            'What LCP, INP, and CLS mean in plain language—and why they affect SEO and user trust.',
+            'A plain-English guide to LCP, INP, and CLS: why Google measures real-world user speed, how it influences search rankings, and how performance directly impacts conversion rates.',
         sections: [
             {
                 type: 'p',
-                text: 'Core Web Vitals are Google’s way of measuring real-world user experience: loading, interactivity, and visual stability. They are not the only ranking factors, but they align with what visitors already feel—slow, jumpy sites lose trust fast.',
+                text: 'Technical jargon like "Largest Contentful Paint" or "Interaction to Next Paint" often gets dismissed by business executives as pure developer trivia. In practice, Google’s Core Web Vitals represent the exact boundary between an enjoyable user experience and a frustrating, leaky sales funnel. Google uses these metrics not just to score your code, but as a confirmed ranking signal in organic search.',
             },
             {
                 type: 'h2',
-                text: 'Largest Contentful Paint (LCP)',
+                text: 'What are Core Web Vitals?',
             },
             {
                 type: 'p',
-                text: 'LCP measures when the main content element becomes visible. Large hero images, slow servers, and render-blocking scripts often hurt LCP. Fix it with image optimization, caching, and lean critical CSS/JavaScript.',
+                text: 'Core Web Vitals are three standardized metrics Google captures from real Chrome browser sessions (the Chrome User Experience Report / CrUX) to evaluate how human beings perceive your site’s speed, responsiveness, and visual stability.',
             },
             {
                 type: 'h2',
-                text: 'Interaction to Next Paint (INP)',
+                text: '1. Largest Contentful Paint (LCP): Perceived Load Speed',
             },
             {
                 type: 'p',
-                text: 'INP reflects responsiveness: how long it takes for the page to react to clicks and taps. Heavy JavaScript on the main thread is a common issue; code splitting and deferring non-essential work help.',
+                text: 'LCP measures the time it takes for the largest visual block of content—typically your hero headline, banner image, or featured video poster—to render completely on the screen.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Target: Under 2.5 seconds on mobile 4G connections.',
+                    'Common Culprits: Unoptimized 3MB background images, cheap shared hosting without caching, and uncompressed web fonts.',
+                    'Fix: Compress images into modern formats (WebP/AVIF), preload critical hero assets, and utilize a worldwide Content Delivery Network (CDN).',
+                ],
             },
             {
                 type: 'h2',
-                text: 'Cumulative Layout Shift (CLS)',
+                text: '2. Interaction to Next Paint (INP): Interface Responsiveness',
             },
             {
                 type: 'p',
-                text: 'CLS captures unexpected layout movement—ads, fonts, or images popping in without reserved space. Reserve dimensions for media, load fonts carefully, and avoid inserting content above existing text after load.',
+                text: 'Replacing the older First Input Delay (FID), INP measures the latency of every single click, tap, or key press a user makes throughout their entire visit until visual feedback is rendered.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Target: Under 200 milliseconds.',
+                    'Common Culprits: Massive JavaScript bundles, bloated analytics tracking scripts, and heavy third-party live chat widgets running on the main browser thread.',
+                    'Fix: Defer non-critical third-party scripts, split code into lazy-loaded routes, and optimize React state updates.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: '3. Cumulative Layout Shift (CLS): Visual Stability',
+            },
+            {
+                type: 'p',
+                text: 'Have you ever tried to tap a button on a mobile site, only for an image or banner ad to pop in at the last microsecond and cause you to click the wrong element? That frustrating jump is Layout Shift.',
+            },
+            {
+                type: 'ul',
+                items: [
+                    'Target: A score below 0.1.',
+                    'Common Culprits: Images, videos, or ad banners rendered without predefined width and height dimensions in CSS, causing the browser to re-flow the page.',
+                    'Fix: Always assign explicit aspect-ratio or width/height attributes to media and reserve layout space for asynchronous elements.',
+                ],
+            },
+            {
+                type: 'h2',
+                text: 'The revenue impact of sub-second performance',
+            },
+            {
+                type: 'p',
+                text: 'Studies conducted by Google and Deloitte confirmed that a mere 100ms improvement in mobile site speed resulted in an 8.4% increase in conversions for retail sites and a 9.2% increase in average order value. Faster sites do not just rank higher—they generate more profit from every single visitor.',
             },
         ],
     },
@@ -785,8 +944,30 @@ const blogPostsRaw = [
     },
 ];
 
-export const blogPosts = blogPostsRaw.map(withBlogCover);
+function calculateReadingTime(sections) {
+    if (!sections || !Array.isArray(sections)) return '5 min read';
+    let count = 0;
+    sections.forEach((s) => {
+        if (s.text) count += s.text.trim().split(/\s+/).filter(Boolean).length;
+        if (s.items) s.items.forEach((it) => { count += it.trim().split(/\s+/).filter(Boolean).length; });
+    });
+    const mins = Math.max(3, Math.ceil(count / 180));
+    return `${mins} min read`;
+}
+
+export const blogPosts = blogPostsRaw.map((post) => {
+    const withCover = withBlogCover(post);
+    return {
+        ...withCover,
+        readTime: calculateReadingTime(post.sections),
+        author: {
+            name: 'Nymbloc Technical Strategy Team',
+            role: 'Web Architecture & Conversion Optimization',
+        },
+    };
+});
 
 export function getPostBySlug(slug) {
     return blogPosts.find((p) => p.slug === slug);
 }
+

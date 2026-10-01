@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { NICHE_DEMO_LIST } from '../data/nicheDemos';
 import Counter from '../components/Counter';
 import FaqAccordion from '../components/FaqAccordion';
-import AdSense from '../components/AdSense';
 
 const PROCESS_STEPS = [
     {
@@ -32,19 +31,19 @@ const SAMPLE_PROJECTS = [
     {
         title: 'CloudFlow ERP (sample)',
         cat: 'Internal ops / reporting',
-        img: '/assets/expertise.jpg',
+        img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
         desc: 'Illustrative example: dashboards and workflows for inventory and operations—not a live client endorsement.',
     },
     {
         title: 'Nexus Analytics (sample)',
         cat: 'Product UI',
-        img: '/assets/react.png',
+        img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
         desc: 'Illustrative example: a focused analytics experience for teams that need fast load times and clear KPIs.',
     },
     {
         title: 'EcoStyle Commerce (sample)',
         cat: 'WordPress / WooCommerce',
-        img: '/assets/wordpress.png',
+        img: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80',
         desc: 'Illustrative example: content-led storefront patterns with conversion-oriented product pages.',
     },
 ];
@@ -114,16 +113,6 @@ const Home = () => {
                 </p>
             </section>
 
-            <section
-                className="section-padding section-alt home-ad-section robot-page-section"
-                aria-label="Advertisement"
-                data-aos="fade-up"
-            >
-                <div className="container">
-                    <p className="home-ad-label">Advertisement</p>
-                    <AdSense adSlot="4077183281" className="home-ad-unit" />
-                </div>
-            </section>
 
             <section className="section-padding section-alt robot-page-section section--mobile-grid" data-aos="fade-up">
                 <div className="container">

@@ -80,7 +80,7 @@ const About = () => {
                             </p>
                         </div>
                         <div className="mv-card" data-aos="fade-up" data-aos-delay="80">
-                            <h3>Our Vision</h3>
+                            <h3>Our vision</h3>
                             <p>
                                 To be a dependable partner for teams that care about quality—known for honest scoping,
                                 careful execution, and long-term support when you need it.

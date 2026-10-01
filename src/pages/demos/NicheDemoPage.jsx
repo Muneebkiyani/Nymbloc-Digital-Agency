@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Navigate, useParams, useLocation } from 'react-router-dom';
-import { getNicheDemoBySlug, whatsappHref } from '../../data/nicheDemos';
+import { getNicheDemoBySlug, whatsappHref, WHATSAPP_E164 } from '../../data/nicheDemos';
 import RestaurantFarmLayout from './RestaurantFarmLayout';
 import SalonStudioLayout from './SalonStudioLayout';
 import CleaningCorporateLayout from './CleaningCorporateLayout';
@@ -162,7 +162,7 @@ function NicheDemoPage() {
                     <a href={wa} className="btn btn-whatsapp btn-whatsapp-lg" target="_blank" rel="noopener noreferrer">
                         Chat on WhatsApp
                     </a>
-                    <p className="niche-lp-cta-phone">+92 316 5423233</p>
+                    <p className="niche-lp-cta-phone">WhatsApp: +{WHATSAPP_E164}</p>
                 </div>
             </section>
 

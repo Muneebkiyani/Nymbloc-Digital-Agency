@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 
 const Layout = lazy(() => import('./components/Layout'));
 const DemoStandaloneLayout = lazy(() => import('./components/DemoStandaloneLayout'));
@@ -26,6 +26,12 @@ const ScrollToTop = () => {
     }, [pathname]);
     return null;
 };
+
+/** Redirects /demo/:slug → /demos/:slug (canonical URL) */
+function RedirectDemoSlug() {
+    const { slug } = useParams();
+    return <Navigate to={`/demos/${slug}`} replace />;
+}
 
 function RouteFallback() {
     return (
@@ -68,11 +74,13 @@ function App() {
                         <Route path="/privacy" element={<Privacy />} />
                         <Route path="/terms" element={<Terms />} />
                         <Route path="/demos" element={<DemosIndex />} />
-                        <Route path="/demo" element={<DemosIndex />} />
+                        {/* Canonical redirect: /demo → /demos */}
+                        <Route path="/demo" element={<Navigate to="/demos" replace />} />
                     </Route>
                     <Route element={<DemoStandaloneLayout />}>
                         <Route path="/demos/:slug" element={<NicheDemoPage />} />
-                        <Route path="/demo/:slug" element={<NicheDemoPage />} />
+                        {/* Canonical redirect: /demo/:slug → /demos/:slug */}
+                        <Route path="/demo/:slug" element={<RedirectDemoSlug />} />
                     </Route>
                 </Routes>
             </Suspense>

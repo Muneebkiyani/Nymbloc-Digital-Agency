@@ -26,8 +26,8 @@ function renderSection(section, index) {
     if (section.type === 'ul') {
         return (
             <ul key={index} className="article-ul" data-aos="fade-up" data-aos-delay={delay}>
-                {section.items.map((item, i) => (
-                    <li key={i}>{item}</li>
+                {section.items.map((item) => (
+                    <li key={item}>{item}</li>
                 ))}
             </ul>
         );
@@ -113,17 +113,31 @@ const BlogPost = () => {
                             <p className="page-header-lead article-deck" itemProp="description">
                                 {post.excerpt}
                             </p>
-                            <time
-                                className="article-published"
-                                dateTime={post.date}
-                                itemProp="datePublished"
-                            >
-                                {new Date(post.date + 'T12:00:00').toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric',
-                                })}
-                            </time>
+                            <div className="article-meta-row">
+                                <div className="article-author-byline" itemProp="author" itemScope itemType="https://schema.org/Person">
+                                    <span className="byline-avatar" aria-hidden="true">NB</span>
+                                    <div className="byline-details">
+                                        <span className="byline-name" itemProp="name">{post.author?.name || 'Nymbloc Technical Team'}</span>
+                                        <span className="byline-role" itemProp="jobTitle">{post.author?.role || 'Web Strategy & Engineering'}</span>
+                                    </div>
+                                </div>
+                                <time
+                                    className="article-published"
+                                    dateTime={post.date}
+                                    itemProp="datePublished"
+                                >
+                                    {new Date(post.date + 'T12:00:00').toLocaleDateString('en-US', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric',
+                                    })}
+                                </time>
+                            </div>
+                            <meta itemProp="dateModified" content={post.date} />
+                            <div itemProp="publisher" itemScope itemType="https://schema.org/Organization" style={{ display: 'none' }}>
+                                <meta itemProp="name" content="NYMBLOC" />
+                                <meta itemProp="url" content="https://nymbloc.com" />
+                            </div>
                             <p className="article-hero-photo-credit">
                                 Photo: {post.coverAlt}{' '}
                                 <span className="article-hero-credit-source">
@@ -159,6 +173,29 @@ const BlogPost = () => {
                         <div className="article-content" itemProp="articleBody">
                             {renderArticleBody(post.sections)}
                         </div>
+
+                        {/* Author & Editorial Review Box (E-E-A-T) */}
+                        <div className="article-author-card" data-aos="fade-up">
+                            <div className="author-card-header">
+                                <div className="author-card-avatar" aria-hidden="true">NB</div>
+                                <div className="author-card-title-group">
+                                    <span className="author-card-eyebrow">Editorial & Technical Standards</span>
+                                    <h3 className="author-card-name">Written & Reviewed by NYMBLOC Engineering</h3>
+                                    <p className="author-card-role">Digital Strategy, Full-Stack Architecture & Performance</p>
+                                </div>
+                            </div>
+                            <p className="author-card-bio">
+                                This guide was authored and reviewed by senior engineers and consultants at NYMBLOC. 
+                                We specialize in high-performance React architectures, accessible UI systems, and conversion-focused WordPress platforms. 
+                                Our content is grounded in real-world deployment data, W3C standards, and Google Search Central guidelines.
+                            </p>
+                            <div className="author-card-trust-badges">
+                                <span className="trust-badge">✓ Technically Verified</span>
+                                <span className="trust-badge">✓ Updated for 2026</span>
+                                <span className="trust-badge">✓ Independent Editorial Analysis</span>
+                            </div>
+                        </div>
+
                         <div className="article-footer-cta" data-aos="fade-up">
                             <h2 className="article-h2">Need help with your site?</h2>
                             <p className="article-p">

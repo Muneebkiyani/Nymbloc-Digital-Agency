@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+
+const DESKTOP_BREAKPOINT = 992;
 
 const Header = () => {
     const { pathname } = useLocation();
@@ -7,6 +9,9 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isDemosOpen, setIsDemosOpen] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(
+        () => typeof window !== 'undefined' && window.innerWidth > DESKTOP_BREAKPOINT
+    );
     const demosNavActive =
         pathname === '/demos' ||
         pathname === '/demo' ||
@@ -22,17 +27,25 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth > DESKTOP_BREAKPOINT);
+        };
+        window.addEventListener('resize', handleResize, { passive: true });
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
         document.body.style.overflow = isMenuOpen ? 'hidden' : '';
         return () => {
             document.body.style.overflow = '';
         };
     }, [isMenuOpen]);
 
-    const closeMenu = () => {
+    const closeMenu = useCallback(() => {
         setIsMenuOpen(false);
         setIsServicesOpen(false);
         setIsDemosOpen(false);
-    };
+    }, []);
 
     return (
         <header className={`robot-header ${isScrolled ? 'header-scrolled' : ''}`}>
@@ -59,14 +72,14 @@ const Header = () => {
                         <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active-link' : ''} onClick={closeMenu}>About</NavLink></li>
                         <li
                             className="dropdown"
-                            onMouseEnter={() => window.innerWidth > 992 && setIsServicesOpen(true)}
-                            onMouseLeave={() => window.innerWidth > 992 && setIsServicesOpen(false)}
+                            onMouseEnter={() => isDesktop && setIsServicesOpen(true)}
+                            onMouseLeave={() => isDesktop && setIsServicesOpen(false)}
                         >
                             <NavLink
                                 to="/services"
                                 className={({ isActive }) => (isActive || isServicesOpen) ? 'active-link dropdown-toggle' : 'dropdown-toggle'}
                                 onClick={(e) => {
-                                    if (window.innerWidth <= 992) {
+                                    if (!isDesktop) {
                                         e.preventDefault();
                                         setIsServicesOpen(!isServicesOpen);
                                     } else {
@@ -84,8 +97,8 @@ const Header = () => {
                         </li>
                         <li
                             className="dropdown"
-                            onMouseEnter={() => window.innerWidth > 992 && setIsDemosOpen(true)}
-                            onMouseLeave={() => window.innerWidth > 992 && setIsDemosOpen(false)}
+                            onMouseEnter={() => isDesktop && setIsDemosOpen(true)}
+                            onMouseLeave={() => isDesktop && setIsDemosOpen(false)}
                         >
                             <span
                                 role="button"
@@ -94,14 +107,14 @@ const Header = () => {
                                 aria-expanded={isDemosOpen}
                                 aria-haspopup="true"
                                 onClick={() => {
-                                    if (window.innerWidth <= 992) {
+                                    if (!isDesktop) {
                                         setIsDemosOpen(!isDemosOpen);
                                     }
                                 }}
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter' || e.key === ' ') {
                                         e.preventDefault();
-                                        if (window.innerWidth <= 992) {
+                                        if (!isDesktop) {
                                             setIsDemosOpen(!isDemosOpen);
                                         }
                                     }
@@ -110,10 +123,10 @@ const Header = () => {
                                 Demos <span className={`arrow ${isDemosOpen ? 'up' : ''}`}>▾</span>
                             </span>
                             <ul className={`dropdown-menu ${isDemosOpen ? 'show' : ''}`} role="menu">
-                                <li><Link to="/demos/restaurants" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Restaurants & Cafes</Link></li>
-                                <li><Link to="/demos/salons" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Salons & Beauty</Link></li>
+                                <li><Link to="/demos/restaurants" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Restaurants &amp; Cafes</Link></li>
+                                <li><Link to="/demos/salons" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Salons &amp; Beauty</Link></li>
                                 <li><Link to="/demos/cleaning" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Cleaning Services</Link></li>
-                                <li><Link to="/demos/bakeries" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Bakeries & Food Shops</Link></li>
+                                <li><Link to="/demos/bakeries" target="_blank" rel="noopener noreferrer" onClick={closeMenu} role="menuitem">Bakeries &amp; Food Shops</Link></li>
                             </ul>
                         </li>
                         <li><NavLink to="/blog" className={({ isActive }) => isActive ? 'active-link' : ''} onClick={closeMenu}>Blog</NavLink></li>

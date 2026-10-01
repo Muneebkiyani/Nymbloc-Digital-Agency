@@ -8,20 +8,26 @@ import CookieConsent from './CookieConsent';
 import AOS from 'aos';
 import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
+// Module-level guard: AOS only needs to be initialised once per page load.
+let aosInitialized = false;
+
 const Layout = () => {
     const { pathname } = useLocation();
     useSmoothScroll();
 
     useEffect(() => {
-        AOS.init({
-            /* Subtle fades; repeat on scroll so sections fade in / out (AdSense-safe: no infinite loops, no flashing ads) */
-            duration: 520,
-            once: false,
-            offset: 56,
-            easing: 'ease-out-cubic',
-            delay: 0,
-            anchorPlacement: 'top-bottom',
-        });
+        if (!aosInitialized) {
+            AOS.init({
+                /* Subtle fades; repeat on scroll so sections fade in / out (AdSense-safe: no infinite loops, no flashing ads) */
+                duration: 520,
+                once: false,
+                offset: 56,
+                easing: 'ease-out-cubic',
+                delay: 0,
+                anchorPlacement: 'top-bottom',
+            });
+            aosInitialized = true;
+        }
 
         return () => {};
     }, []);

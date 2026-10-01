@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import AOS from 'aos';
 import { ScrollTrigger } from '../utils/gsapClient';
 
 /**
- * Lenis smooth scrolling + ScrollTrigger sync. Disabled on small viewports so AOS + native scroll work reliably.
- * Skipped when user prefers reduced motion.
+ * Lenis smooth scrolling + ScrollTrigger sync. Disabled on small viewports so native scroll
+ * works reliably on mobile. Skipped when user prefers reduced motion.
+ * Note: AOS manages its own IntersectionObserver — no manual AOS.refresh() needed here.
  */
 export function useSmoothScroll() {
     useEffect(() => {
@@ -22,14 +22,6 @@ export function useSmoothScroll() {
 
         lenis.on('scroll', ScrollTrigger.update);
 
-        let aosTimer;
-        lenis.on('scroll', () => {
-            clearTimeout(aosTimer);
-            aosTimer = setTimeout(() => {
-                AOS.refresh();
-            }, 120);
-        });
-
         let rafId = 0;
         const raf = (time) => {
             lenis.raf(time);
@@ -38,9 +30,9 @@ export function useSmoothScroll() {
         rafId = requestAnimationFrame(raf);
 
         return () => {
-            clearTimeout(aosTimer);
             cancelAnimationFrame(rafId);
             lenis.destroy();
         };
     }, []);
 }
+
