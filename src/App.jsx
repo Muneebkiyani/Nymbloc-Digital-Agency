@@ -11,6 +11,9 @@ const Contact = lazy(() => import('./pages/Contact'));
 const WordPressDevelopment = lazy(() => import('./pages/services/WordPressDevelopment'));
 const WebsiteDevelopment = lazy(() => import('./pages/services/WebsiteDevelopment'));
 const ApplicationDevelopment = lazy(() => import('./pages/services/ApplicationDevelopment'));
+const GraphicDesignIT = lazy(() => import('./pages/services/GraphicDesignIT'));
+const ShopifyDevelopment = lazy(() => import('./pages/services/ShopifyDevelopment'));
+const ShopifyConnector = lazy(() => import('./pages/services/ShopifyConnector'));
 const Checkout = lazy(() => import('./pages/Checkout'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
@@ -68,6 +71,9 @@ function App() {
                         <Route path="/services/website" element={<WebsiteDevelopment />} />
                         <Route path="/services/application" element={<ApplicationDevelopment />} />
                         <Route path="/services/wordpress" element={<WordPressDevelopment />} />
+                        <Route path="/services/graphic-design-it" element={<GraphicDesignIT />} />
+                        <Route path="/services/shopify" element={<ShopifyDevelopment />} />
+                        <Route path="/services/shopify-connector" element={<ShopifyConnector />} />
                         <Route path="/checkout" element={<Checkout />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/blog/:slug" element={<BlogPost />} />

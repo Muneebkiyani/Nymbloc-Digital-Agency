@@ -61,6 +61,51 @@ const Services = () => {
                                 <Link to="/services/wordpress" className="btn btn-outline" style={{ borderRadius: '10px', fontSize: '0.9rem' }}>Pricing &amp; Details</Link>
                             </div>
                         </div>
+
+                        <div className="service-row" data-aos="fade-up">
+                            <div className="service-image" data-aos="fade-up" data-aos-delay="0">
+                                <img src="/assets/innovation.jpg" alt="Graphic Design and IT" className="responsive-img" />
+                            </div>
+                            <div className="service-text" data-aos="fade-up" data-aos-delay="80">
+                                <div className="service-icon-large">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                                </div>
+                                <h2 className="section-title robot-heading">Graphic Design &amp; IT Services</h2>
+                                <p>Vector brand identity, Figma UI/UX prototyping, cloud infrastructure provisioning, and corporate email security.</p>
+                                <br />
+                                <Link to="/services/graphic-design-it" className="btn btn-outline" style={{ borderRadius: '10px', fontSize: '0.9rem' }}>Pricing &amp; Details</Link>
+                            </div>
+                        </div>
+
+                        <div className="service-row" data-aos="fade-up">
+                            <div className="service-image" data-aos="fade-up" data-aos-delay="0">
+                                <img src="/assets/infrastructure.jpg" alt="Shopify Development" className="responsive-img" />
+                            </div>
+                            <div className="service-text" data-aos="fade-up" data-aos-delay="80">
+                                <div className="service-icon-large">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </div>
+                                <h2 className="section-title robot-heading">Shopify Store Development</h2>
+                                <p>Custom Liquid themes, high-converting checkout flows, app integrations, and friction-free platform migrations.</p>
+                                <br />
+                                <Link to="/services/shopify" className="btn btn-outline" style={{ borderRadius: '10px', fontSize: '0.9rem' }}>Pricing &amp; Details</Link>
+                            </div>
+                        </div>
+
+                        <div className="service-row" data-aos="fade-up">
+                            <div className="service-image" data-aos="fade-up" data-aos-delay="0">
+                                <img src="/assets/bg-network-1.jpg" alt="Shopify Connector Software" className="responsive-img" />
+                            </div>
+                            <div className="service-text" data-aos="fade-up" data-aos-delay="80">
+                                <div className="service-icon-large">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                </div>
+                                <h2 className="section-title robot-heading">Shopify Connector Software</h2>
+                                <p>Self-hosted integration software: synchronize inventory, orders, and products between external databases and Shopify.</p>
+                                <br />
+                                <Link to="/services/shopify-connector" className="btn btn-outline" style={{ borderRadius: '10px', fontSize: '0.9rem' }}>Licensing &amp; Details</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -38,6 +38,9 @@ const Footer = () => {
                             <li><Link to="/services/website">Website Development</Link></li>
                             <li><Link to="/services/application">Application Development</Link></li>
                             <li><Link to="/services/wordpress">WordPress Sites</Link></li>
+                            <li><Link to="/services/graphic-design-it">Graphic Design &amp; IT</Link></li>
+                            <li><Link to="/services/shopify">Shopify Stores</Link></li>
+                            <li><Link to="/services/shopify-connector">Shopify Connector Tool</Link></li>
                         </ul>
                     </div>
                     <div className="footer-col">

@@ -33,6 +33,21 @@ export const ROUTE_META = {
         description:
             'Custom WordPress themes, WooCommerce stores, and editorial workflows—fast, secure, and easy for your team to manage.',
     },
+    '/services/graphic-design-it': {
+        title: 'Graphic design & IT services | Branding, cloud & security',
+        description:
+            'Vector brand identity, UI/UX prototyping in Figma, cloud server deployment, corporate email security (SPF/DKIM/DMARC), and ongoing IT support.',
+    },
+    '/services/shopify': {
+        title: 'Shopify store design & development | High-converting e-commerce',
+        description:
+            'Custom Shopify & Shopify Plus themes, mobile checkout optimization, app integrations (Klaviyo/Yotpo), and seamless store migrations.',
+    },
+    '/services/shopify-connector': {
+        title: 'Shopify connector software | Inventory & order database sync',
+        description:
+            'Self-hosted integration software: synchronize inventory, orders, and products in real time between your external database/ERP and Shopify.',
+    },
     '/blog': {
         title: 'Blog | Guides on websites, performance & digital strategy',
         description:

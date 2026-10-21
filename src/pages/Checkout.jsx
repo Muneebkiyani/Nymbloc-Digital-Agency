@@ -28,6 +28,21 @@ const Checkout = () => {
                 Standard: '$249',
                 Premium: '$299',
             },
+            GraphicDesignIT: {
+                'Starter Identity & IT Setup': '$199',
+                'Brand & Cloud Infrastructure': '$349',
+                'Enterprise Design & IT Retainer': '$599',
+            },
+            Shopify: {
+                'Starter Shopify Store': '$249',
+                'Custom Growth Store': '$449',
+                'Advanced Shopify Platform': '$699',
+            },
+            ShopifyConnector: {
+                'Connector Core License': '$299',
+                'Bidirectional Sync Pro': '$499',
+                'Bespoke Enterprise Connector': '$799',
+            },
         };
 
         return prices[service]?.[plan] || 'Custom / Contact';

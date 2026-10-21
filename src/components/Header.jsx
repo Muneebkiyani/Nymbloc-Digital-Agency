@@ -93,6 +93,9 @@ const Header = () => {
                                 <li><Link to="/services/website" onClick={closeMenu}>Website Development</Link></li>
                                 <li><Link to="/services/application" onClick={closeMenu}>Application Development</Link></li>
                                 <li><Link to="/services/wordpress" onClick={closeMenu}>WordPress Sites</Link></li>
+                                <li><Link to="/services/graphic-design-it" onClick={closeMenu}>Graphic Design &amp; IT</Link></li>
+                                <li><Link to="/services/shopify" onClick={closeMenu}>Shopify Stores</Link></li>
+                                <li><Link to="/services/shopify-connector" onClick={closeMenu}>Shopify Connector Tool</Link></li>
                             </ul>
                         </li>
                         <li

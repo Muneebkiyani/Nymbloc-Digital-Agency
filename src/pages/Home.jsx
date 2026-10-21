@@ -4,6 +4,81 @@ import { NICHE_DEMO_LIST } from '../data/nicheDemos';
 import Counter from '../components/Counter';
 import FaqAccordion from '../components/FaqAccordion';
 
+const SERVICE_ADS = [
+    {
+        id: 'website',
+        icon: '🌐',
+        badge: 'Web Dev',
+        title: 'Custom Website Development',
+        desc: 'Performance-first marketing sites, landing pages & custom web experiences built for speed and conversions.',
+        from: '$149',
+        accent: '#1c2a6c',
+        accentLight: 'rgba(28,42,108,0.08)',
+        checkoutLink: '/checkout?service=Website&plan=Starter%20Business%20Site',
+        serviceLink: '/services/website',
+    },
+    {
+        id: 'application',
+        icon: '⚙️',
+        badge: 'App Dev',
+        title: 'Application Development',
+        desc: 'Dashboards, SaaS products, and custom integrations built with React, Node.js, and scalable cloud architecture.',
+        from: '$399',
+        accent: '#7c3aed',
+        accentLight: 'rgba(124,58,237,0.08)',
+        checkoutLink: '/checkout?service=Application&plan=MVP%20Application',
+        serviceLink: '/services/application',
+    },
+    {
+        id: 'wordpress',
+        icon: '🔷',
+        badge: 'WordPress',
+        title: 'WordPress & WooCommerce',
+        desc: 'Custom themes, block editors, and full WooCommerce stores so your team can publish and sell without a developer.',
+        from: '$199',
+        accent: '#0ea5e9',
+        accentLight: 'rgba(14,165,233,0.08)',
+        checkoutLink: '/checkout?service=WordPress&plan=Starter%20WordPress%20Site',
+        serviceLink: '/services/wordpress',
+    },
+    {
+        id: 'graphic-design-it',
+        icon: '🎨',
+        badge: 'Design & IT',
+        title: 'Graphic Design & IT Services',
+        desc: 'Brand identities, Figma UI/UX prototypes, corporate email setup, cloud infrastructure & 24/7 IT support.',
+        from: '$199',
+        accent: '#f97316',
+        accentLight: 'rgba(249,115,22,0.08)',
+        checkoutLink: '/checkout?service=GraphicDesignIT&plan=Starter%20Identity%20%26%20IT%20Setup',
+        serviceLink: '/services/graphic-design-it',
+    },
+    {
+        id: 'shopify',
+        icon: '🛒',
+        badge: 'Shopify',
+        title: 'Shopify Store Design',
+        desc: 'High-converting, mobile-first Shopify storefronts with custom Liquid themes, cart drawers & email integrations.',
+        from: '$249',
+        accent: '#16a34a',
+        accentLight: 'rgba(22,163,74,0.08)',
+        checkoutLink: '/checkout?service=Shopify&plan=Starter%20Shopify%20Store',
+        serviceLink: '/services/shopify',
+    },
+    {
+        id: 'shopify-connector',
+        icon: '🔗',
+        badge: 'Software',
+        title: 'Shopify Connector Software',
+        desc: 'Self-hosted middleware that syncs your database, ERP, or inventory system to Shopify in real time — zero SaaS fees.',
+        from: '$299',
+        accent: '#dc2626',
+        accentLight: 'rgba(220,38,38,0.08)',
+        checkoutLink: '/checkout?service=ShopifyConnector&plan=Connector%20Core%20License',
+        serviceLink: '/services/shopify-connector',
+    },
+];
+
 const PROCESS_STEPS = [
     {
         num: '01',
@@ -112,6 +187,60 @@ const Home = () => {
                     </a>
                 </p>
             </section>
+
+            {/* ── SERVICES ANNOUNCEMENT STRIP ─────────────────────────────── */}
+            <section className="services-announce-section" data-aos="fade-up">
+                <div className="container">
+                    <div className="services-announce-header">
+                        <span className="section-subtitle">🚀 Now Available</span>
+                        <h2 className="section-title section-title-business">Our Services — Pick &amp; Get Started</h2>
+                        <p className="section-lead">
+                            Everything your business needs in one place. Click any service to go directly to checkout.
+                        </p>
+                    </div>
+                    <div className="services-announce-grid">
+                        {SERVICE_ADS.map((s, i) => (
+                            <div
+                                key={s.id}
+                                className="service-announce-card"
+                                style={{ '--sa-accent': s.accent, '--sa-accent-light': s.accentLight }}
+                                data-aos="fade-up"
+                                data-aos-delay={i * 60}
+                            >
+                                <div className="sa-top">
+                                    <span className="sa-badge" style={{ background: s.accent }}>{s.badge}</span>
+                                    <span className="sa-icon">{s.icon}</span>
+                                </div>
+                                <h3 className="sa-title">{s.title}</h3>
+                                <p className="sa-desc">{s.desc}</p>
+                                <div className="sa-footer">
+                                    <div className="sa-price">
+                                        <span className="sa-from">from</span>
+                                        <span className="sa-amount">{s.from}</span>
+                                    </div>
+                                    <div className="sa-actions">
+                                        <Link
+                                            to={s.checkoutLink}
+                                            className="sa-cta-btn"
+                                            aria-label={`Get started with ${s.title}`}
+                                        >
+                                            Get Started →
+                                        </Link>
+                                        <Link
+                                            to={s.serviceLink}
+                                            className="sa-details-link"
+                                            aria-label={`View details for ${s.title}`}
+                                        >
+                                            Details
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
 
 
             <section className="section-padding section-alt robot-page-section section--mobile-grid" data-aos="fade-up">
