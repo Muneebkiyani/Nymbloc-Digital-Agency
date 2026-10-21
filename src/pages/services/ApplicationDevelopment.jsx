@@ -115,6 +115,30 @@ const ApplicationDevelopment = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className="service-intro-block" style={{ marginTop: '60px' }} data-aos="fade-up">
+                        <h2 className="section-title">Application Deliverables & Architecture Policy</h2>
+                        <p>Web applications and SaaS MVPs require clear structural boundaries to ensure maintainability and security:</p>
+                        <br />
+                        <ul className="feature-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Clean Architecture & IP Handover:</strong> Component-based frontend code, typed API schemas, relational database migrations, and 100% intellectual property ownership upon launch.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Security & Data Integrity:</strong> Environment variable protection, row-level database security rules, and encrypted password authentication flows.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Infrastructure Isolation:</strong> Databases (PostgreSQL/Supabase) and cloud hosting (Vercel/AWS) are provisioned directly within client-owned developer accounts.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Staging Validation & Warranty:</strong> Full end-to-end user acceptance testing on private staging, followed by a 30-day post-launch bug remediation warranty.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>

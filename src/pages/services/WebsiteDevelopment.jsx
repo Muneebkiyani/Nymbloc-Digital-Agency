@@ -117,6 +117,30 @@ const WebsiteDevelopment = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className="service-intro-block" style={{ marginTop: '60px' }} data-aos="fade-up">
+                        <h2 className="section-title">Deliverables & Scope Boundaries</h2>
+                        <p>We believe in upfront, transparent scoping so you know precisely what is included in every website sprint:</p>
+                        <br />
+                        <ul className="feature-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Full Code Ownership:</strong> 100% transfer of custom source code, repository access, and production deployment scripts upon final milestone sign-off.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Technical Standards:</strong> Built for sub-2-second mobile load times, semantic HTML5 hierarchy, and Core Web Vitals compliance.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Prerequisites & Third Parties:</strong> Domain registration, cloud hosting, and third-party API fees are maintained directly on client accounts.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Warranty & Support:</strong> Includes 2 rounds of structured staging review revisions and a 30-day post-launch defect warranty.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>

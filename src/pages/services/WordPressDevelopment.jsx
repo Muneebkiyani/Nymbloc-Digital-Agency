@@ -117,6 +117,30 @@ const WordPressDevelopment = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className="service-intro-block" style={{ marginTop: '60px' }} data-aos="fade-up">
+                        <h2 className="section-title">WordPress Deliverables & Governance Policy</h2>
+                        <p>We deliver high-performing, lightweight WordPress and WooCommerce experiences built for long-term editorial freedom:</p>
+                        <br />
+                        <ul className="feature-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Block Editor Architecture (Gutenberg):</strong> Custom blocks and templates using clean PHP/React components rather than bloated page-builder plugins that slow down site speed.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Security & Performance Baseline:</strong> Server-side caching setup, database table indexing, WebP image compression, and least-privilege user account configuration.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Plugin Governance & Licensing:</strong> Commercial plugin licenses (e.g. ACF Pro, WooCommerce extensions) are registered directly to client accounts for seamless lifetime updates.
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <strong>Editorial Training & Handover:</strong> Full administrative credentials, staging-to-production migration, and a 30-day post-launch bug warranty.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>

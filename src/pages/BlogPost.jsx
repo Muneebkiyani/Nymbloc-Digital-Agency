@@ -39,8 +39,8 @@ function renderArticleBody(sections) {
     const pIndices = sections
         .map((s, i) => (s.type === 'p' ? i : -1))
         .filter((i) => i >= 0);
-    const insertAfter =
-        pIndices.length >= 2 ? pIndices[1] : pIndices.length === 1 ? pIndices[0] : -1;
+    // Only render an in-article ad if article has at least 4 paragraphs to maintain high content-to-ad ratio
+    const insertAfter = pIndices.length >= 4 ? pIndices[2] : -1;
 
     const nodes = [];
     sections.forEach((section, index) => {

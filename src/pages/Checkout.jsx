@@ -94,7 +94,7 @@ const Checkout = () => {
                                     </div>
 
                                     <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                                        Confirm Selection
+                                        Submit Project Inquiry →
                                     </button>
                                 </form>
                             </div>

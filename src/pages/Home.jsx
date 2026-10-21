@@ -270,30 +270,64 @@ const Home = () => {
                 <div className="container stats-container">
                     <div className="stat-item">
                         <h2>
-                            <Counter target={50} suffix="+" />
+                            <Counter target={100} suffix="%" />
                         </h2>
-                        <p>Projects delivered (all time)</p>
+                        <p>Code ownership at project launch</p>
                     </div>
                     <div className="stat-item">
                         <h2>
-                            <Counter target={98} suffix="%" />
+                            <Counter target={90} suffix="+" />
                         </h2>
-                        <p>Clients satisfied (reported)</p>
+                        <p>Lighthouse performance baseline target</p>
                     </div>
                     <div className="stat-item">
                         <h2>
                             <Counter target={10} suffix="+" />
                         </h2>
-                        <p>Specialists on tap</p>
+                        <p>Frameworks & CMS architectures supported</p>
                     </div>
                     <div className="stat-item">
                         <h2>
-                            <Counter target={5} suffix="+" />
+                            <Counter target={24} suffix="h" />
                         </h2>
-                        <p>Years building for the web</p>
+                        <p>Guaranteed response on new inquiries</p>
                     </div>
                 </div>
             </div>
+
+            <section className="section-padding robot-page-section section--mobile-grid" data-aos="fade-up">
+                <div className="container">
+                    <div className="section-intro">
+                        <span className="section-subtitle">Knowledge Hub</span>
+                        <h2 className="section-title section-title-business">Guides for business owners & operators</h2>
+                        <p className="section-lead">
+                            Actionable, vendor-neutral breakdowns on pricing, technical architecture, and web performance.
+                        </p>
+                    </div>
+                    <div className="services-preview-grid">
+                        <div className="service-preview-card" data-aos="fade-up">
+                            <h3>Website Cost Breakdown</h3>
+                            <p>What custom development, hosting, and ongoing maintenance realistically cost in 2026 without surprise fees.</p>
+                            <Link to="/blog/how-much-does-a-website-cost-2026">Read pricing guide →</Link>
+                        </div>
+                        <div className="service-preview-card" data-aos="fade-up" data-aos-delay="60">
+                            <h3>React vs WordPress</h3>
+                            <p>A pragmatic decision framework: editing workflows, hosting overhead, performance, and team ownership.</p>
+                            <Link to="/blog/react-vs-wordpress-business-site">Read tech framework →</Link>
+                        </div>
+                        <div className="service-preview-card" data-aos="fade-up" data-aos-delay="120">
+                            <h3>Core Web Vitals</h3>
+                            <p>Demystifying LCP, INP, and CLS for operators—how speed and layout stability directly impact conversions.</p>
+                            <Link to="/blog/core-web-vitals-explained-business">Read performance guide →</Link>
+                        </div>
+                    </div>
+                    <p className="text-center" style={{ marginTop: '2.5rem' }}>
+                        <Link to="/blog" className="btn btn-outline" style={{ borderRadius: '10px', fontSize: '0.9rem' }}>
+                            Browse all guides & resources →
+                        </Link>
+                    </p>
+                </div>
+            </section>
 
             <section className="section-padding section-alt robot-page-section" data-aos="fade-up">
                 <div className="container">
